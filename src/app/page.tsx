@@ -1,35 +1,45 @@
 import Link from "next/link";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { HeroBackground } from "@/components/hero-background";
+
+const heroWords = ["Building", "tools", "for", "how", "people", "actually", "live"];
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <ScrollReveal>
-            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl text-ink leading-[1.1] mb-6">
-              Building tools for how people actually live
-            </h1>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
+      <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center px-6 overflow-hidden">
+        <HeroBackground />
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl text-ink leading-[1.1] mb-6">
+            {heroWords.map((word, i) => (
+              <span
+                key={i}
+                className="hero-word"
+                style={{ animationDelay: `${i * 80}ms` }}
+              >
+                {word}
+              </span>
+            ))}
+          </h1>
+          <ScrollReveal delay={600}>
             <p className="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
               CIFR creates thoughtful software for the everyday frictions of
               shared life — starting with the spaces we call home.
             </p>
           </ScrollReveal>
-          <ScrollReveal delay={200}>
+          <ScrollReveal delay={700}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="#products"
-                className="inline-flex items-center justify-center gap-2 bg-ink text-cream px-8 py-3.5 rounded-full text-sm font-medium hover:bg-blue transition-colors"
+                className="btn-fill inline-flex items-center justify-center gap-2 bg-ink text-cream px-8 py-3.5 rounded-full text-sm font-medium transition-colors"
               >
                 See our work
                 <span aria-hidden>&rarr;</span>
               </Link>
               <Link
                 href="#philosophy"
-                className="inline-flex items-center justify-center gap-2 border border-border text-ink px-8 py-3.5 rounded-full text-sm font-medium hover:bg-surface transition-colors"
+                className="btn-fill btn-outline-fill inline-flex items-center justify-center gap-2 border border-border text-ink px-8 py-3.5 rounded-full text-sm font-medium transition-colors"
               >
                 Our philosophy
               </Link>
@@ -41,7 +51,7 @@ export default function Home() {
       {/* Products */}
       <section id="products" className="py-20 px-6 scroll-mt-20">
         <div className="max-w-5xl mx-auto">
-          <ScrollReveal>
+          <ScrollReveal variant="fade-in">
             <div className="text-center mb-14">
               <p className="text-sm font-medium text-blue uppercase tracking-wider mb-3">
                 Products
@@ -57,7 +67,7 @@ export default function Home() {
             <ScrollReveal delay={0}>
               <Link
                 href="/cleanslate"
-                className="group block bg-white rounded-2xl p-8 border border-border hover:border-blue/30 hover:shadow-lg transition-all duration-300 md:col-span-1"
+                className="group block bg-white rounded-2xl p-8 border border-border card-interactive md:col-span-1"
               >
                 <div className="flex items-start justify-between mb-5">
                   <span className="text-3xl">🏠</span>
@@ -80,7 +90,7 @@ export default function Home() {
             </ScrollReveal>
 
             {/* Coming Soon 1 */}
-            <ScrollReveal delay={100}>
+            <ScrollReveal delay={100} variant="fade-left">
               <div className="rounded-2xl p-8 border-2 border-dashed border-border/60 bg-surface/30 flex flex-col justify-center min-h-[240px]">
                 <div className="text-center">
                   <div className="w-10 h-10 rounded-xl bg-border/30 mx-auto mb-4 flex items-center justify-center">
@@ -95,7 +105,7 @@ export default function Home() {
             </ScrollReveal>
 
             {/* Coming Soon 2 */}
-            <ScrollReveal delay={200}>
+            <ScrollReveal delay={200} variant="fade-right">
               <div className="rounded-2xl p-8 border-2 border-dashed border-border/60 bg-surface/30 flex flex-col justify-center min-h-[240px]">
                 <div className="text-center">
                   <div className="w-10 h-10 rounded-xl bg-border/30 mx-auto mb-4 flex items-center justify-center">
@@ -115,7 +125,7 @@ export default function Home() {
       {/* Philosophy */}
       <section id="philosophy" className="py-20 px-6 bg-surface/50 scroll-mt-20">
         <div className="max-w-5xl mx-auto">
-          <ScrollReveal>
+          <ScrollReveal variant="fade-in">
             <div className="text-center mb-14">
               <p className="text-sm font-medium text-blue uppercase tracking-wider mb-3">
                 Philosophy
@@ -127,7 +137,7 @@ export default function Home() {
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <ScrollReveal delay={0}>
+            <ScrollReveal delay={0} variant="scale-up">
               <div className="text-center md:text-left">
                 <div className="w-12 h-12 rounded-xl bg-blue/10 flex items-center justify-center mx-auto md:mx-0 mb-4">
                   <svg className="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -145,7 +155,7 @@ export default function Home() {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={100}>
+            <ScrollReveal delay={100} variant="scale-up">
               <div className="text-center md:text-left">
                 <div className="w-12 h-12 rounded-xl bg-blue/10 flex items-center justify-center mx-auto md:mx-0 mb-4">
                   <svg className="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -163,7 +173,7 @@ export default function Home() {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={200}>
+            <ScrollReveal delay={200} variant="scale-up">
               <div className="text-center md:text-left">
                 <div className="w-12 h-12 rounded-xl bg-blue/10 flex items-center justify-center mx-auto md:mx-0 mb-4">
                   <svg className="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -186,7 +196,7 @@ export default function Home() {
       {/* About */}
       <section id="about" className="py-20 px-6 scroll-mt-20">
         <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
+          <ScrollReveal variant="fade-in">
             <div className="text-center">
               <p className="text-sm font-medium text-blue uppercase tracking-wider mb-3">
                 About

@@ -23,7 +23,7 @@ export default function CleanSlatePage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <ScrollReveal>
+              <ScrollReveal variant="fade-left">
                 <p className="text-sm font-medium text-blue uppercase tracking-wider mb-4">
                   Introducing
                 </p>
@@ -34,23 +34,23 @@ export default function CleanSlatePage() {
                   Chores, handled.
                 </p>
               </ScrollReveal>
-              <ScrollReveal delay={100}>
+              <ScrollReveal delay={100} variant="fade-left">
                 <p className="text-lg text-muted leading-relaxed mb-8 max-w-lg">
                   The chore app that actually works. Fair assignments, calendar
                   sync, and zero drama — so you can stop arguing about who does
                   what and start living together better.
                 </p>
               </ScrollReveal>
-              <ScrollReveal delay={200}>
+              <ScrollReveal delay={200} variant="fade-left">
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <span className="inline-flex items-center justify-center gap-2 bg-blue text-white px-8 py-3.5 rounded-full text-sm font-medium">
+                  <span className="btn-fill inline-flex items-center justify-center gap-2 bg-blue text-white px-8 py-3.5 rounded-full text-sm font-medium">
                     Coming soon to iOS &amp; Android
                   </span>
                 </div>
               </ScrollReveal>
             </div>
 
-            <ScrollReveal delay={150}>
+            <ScrollReveal delay={150} variant="fade-right">
               <div className="flex justify-center lg:justify-end">
                 <PhoneMockup />
               </div>
@@ -62,7 +62,7 @@ export default function CleanSlatePage() {
       {/* Problem Statement */}
       <section className="py-20 px-6 bg-surface/50">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal>
+          <ScrollReveal variant="fade-in">
             <div className="text-center mb-14">
               <p className="text-sm font-medium text-blue uppercase tracking-wider mb-3">
                 The Problem
@@ -74,22 +74,22 @@ export default function CleanSlatePage() {
           </ScrollReveal>
 
           <div className="grid sm:grid-cols-3 gap-6">
-            <ScrollReveal delay={0}>
-              <div className="bg-white rounded-2xl p-6 border border-border text-center">
+            <ScrollReveal delay={0} variant="fade-left">
+              <div className="bg-white rounded-2xl p-6 border border-border text-center card-interactive">
                 <p className="font-display text-lg text-ink leading-snug">
                   &ldquo;You&apos;ve tried the chore chart. It lasted two weeks.&rdquo;
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <div className="bg-white rounded-2xl p-6 border border-border text-center">
+              <div className="bg-white rounded-2xl p-6 border border-border text-center card-interactive">
                 <p className="font-display text-lg text-ink leading-snug">
                   &ldquo;The group chat &lsquo;system&rsquo; that nobody follows.&rdquo;
                 </p>
               </div>
             </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <div className="bg-white rounded-2xl p-6 border border-border text-center">
+            <ScrollReveal delay={200} variant="fade-right">
+              <div className="bg-white rounded-2xl p-6 border border-border text-center card-interactive">
                 <p className="font-display text-lg text-ink leading-snug">
                   &ldquo;Someone always does more. Everyone knows who.&rdquo;
                 </p>
@@ -97,7 +97,7 @@ export default function CleanSlatePage() {
             </ScrollReveal>
           </div>
 
-          <ScrollReveal delay={300}>
+          <ScrollReveal delay={300} variant="fade-in">
             <p className="text-center text-muted mt-10 text-lg">
               Shared living is great — until it isn&apos;t.
               <br />
@@ -112,7 +112,7 @@ export default function CleanSlatePage() {
       {/* How It Works */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <ScrollReveal>
+          <ScrollReveal variant="fade-in">
             <div className="text-center mb-14">
               <p className="text-sm font-medium text-blue uppercase tracking-wider mb-3">
                 How It Works
@@ -124,7 +124,7 @@ export default function CleanSlatePage() {
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <ScrollReveal delay={0}>
+            <ScrollReveal delay={0} variant="fade-left">
               <div className="text-center">
                 <div className="w-14 h-14 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-5">
                   <span className="font-display text-2xl text-blue">1</span>
@@ -154,7 +154,7 @@ export default function CleanSlatePage() {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={200}>
+            <ScrollReveal delay={200} variant="fade-right">
               <div className="text-center">
                 <div className="w-14 h-14 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-5">
                   <span className="font-display text-2xl text-blue">3</span>
@@ -175,7 +175,7 @@ export default function CleanSlatePage() {
       {/* Features */}
       <section className="py-20 px-6 bg-surface/50">
         <div className="max-w-5xl mx-auto">
-          <ScrollReveal>
+          <ScrollReveal variant="fade-in">
             <div className="text-center mb-14">
               <p className="text-sm font-medium text-blue uppercase tracking-wider mb-3">
                 Features
@@ -245,7 +245,7 @@ export default function CleanSlatePage() {
               },
             ].map((feature, i) => (
               <ScrollReveal key={feature.title} delay={i * 80}>
-                <div className="bg-white rounded-2xl p-6 border border-border hover:border-blue/20 transition-colors">
+                <div className="bg-white rounded-2xl p-6 border border-border card-interactive">
                   <div className="w-10 h-10 rounded-xl bg-blue/10 flex items-center justify-center mb-4">
                     {feature.icon}
                   </div>
@@ -265,7 +265,7 @@ export default function CleanSlatePage() {
       {/* Social Proof */}
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <ScrollReveal>
+          <ScrollReveal variant="scale-up">
             <div className="bg-white rounded-3xl p-10 border border-border">
               <div className="w-16 h-16 rounded-2xl bg-blue/10 flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">🎓</span>
@@ -285,7 +285,7 @@ export default function CleanSlatePage() {
       {/* CTA — hardcoded dark bg so it stays dark in both themes */}
       <section className="py-20 px-6" style={{ backgroundColor: "#151A2C" }}>
         <div className="max-w-3xl mx-auto text-center">
-          <ScrollReveal>
+          <ScrollReveal variant="scale-up">
             <h2 className="font-display text-3xl sm:text-4xl mb-4" style={{ color: "#F4F3EE" }}>
               Ready to stop arguing about chores?
             </h2>
@@ -293,7 +293,7 @@ export default function CleanSlatePage() {
               CleanSlate is coming soon to iOS and Android.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <span className="inline-flex items-center justify-center gap-2 bg-blue text-white px-8 py-3.5 rounded-full text-sm font-medium">
+              <span className="btn-fill inline-flex items-center justify-center gap-2 bg-blue text-white px-8 py-3.5 rounded-full text-sm font-medium">
                 Join the waitlist — Coming soon
               </span>
             </div>

@@ -3,6 +3,7 @@ import { Instrument_Serif, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
+import { CustomCursor } from "@/components/custom-cursor";
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -53,6 +54,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="bg-cream text-ink font-body antialiased">
+        <CustomCursor />
         <Nav />
         <main>{children}</main>
         <Footer />
