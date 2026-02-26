@@ -1,3 +1,9 @@
+# Claude Code
+.claude/
+
+# Build reference docs
+SITE_SPEC.md
+
 # Logs
 logs
 *.log
