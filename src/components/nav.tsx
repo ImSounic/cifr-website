@@ -41,7 +41,7 @@ export function Nav() {
           <ThemeToggle />
           <a
             href="mailto:hello@cifr.studio"
-            className="text-sm bg-ink text-cream px-4 py-2 rounded-full hover:bg-blue transition-colors"
+            className="btn-fill text-sm bg-ink text-cream px-4 py-2 rounded-full"
           >
             Get in touch
           </a>

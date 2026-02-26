@@ -236,6 +236,11 @@ body::before {
   transform: scaleX(1);
 }
 
+/* Bright variant — visible lightening sweep for colored buttons */
+.btn-fill-bright::before {
+  background: linear-gradient(90deg, rgba(255,255,255,0.25), rgba(255,255,255,0.35));
+}
+
 /* ============================================
    HERO WORD STAGGER
    ============================================ */

@@ -43,7 +43,7 @@ export default function CleanSlatePage() {
               </ScrollReveal>
               <ScrollReveal delay={200} variant="fade-left">
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <span className="btn-fill inline-flex items-center justify-center gap-2 bg-blue text-white px-8 py-3.5 rounded-full text-sm font-medium">
+                  <span className="btn-fill btn-fill-bright inline-flex items-center justify-center gap-2 bg-blue text-white px-8 py-3.5 rounded-full text-sm font-medium">
                     Coming soon to iOS &amp; Android
                   </span>
                 </div>
@@ -75,21 +75,21 @@ export default function CleanSlatePage() {
 
           <div className="grid sm:grid-cols-3 gap-6">
             <ScrollReveal delay={0} variant="fade-left">
-              <div className="bg-white rounded-2xl p-6 border border-border text-center card-interactive">
+              <div className="bg-white rounded-2xl p-6 border border-border text-center card-interactive" data-cursor="hover">
                 <p className="font-display text-lg text-ink leading-snug">
                   &ldquo;You&apos;ve tried the chore chart. It lasted two weeks.&rdquo;
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <div className="bg-white rounded-2xl p-6 border border-border text-center card-interactive">
+              <div className="bg-white rounded-2xl p-6 border border-border text-center card-interactive" data-cursor="hover">
                 <p className="font-display text-lg text-ink leading-snug">
                   &ldquo;The group chat &lsquo;system&rsquo; that nobody follows.&rdquo;
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200} variant="fade-right">
-              <div className="bg-white rounded-2xl p-6 border border-border text-center card-interactive">
+              <div className="bg-white rounded-2xl p-6 border border-border text-center card-interactive" data-cursor="hover">
                 <p className="font-display text-lg text-ink leading-snug">
                   &ldquo;Someone always does more. Everyone knows who.&rdquo;
                 </p>
@@ -245,7 +245,7 @@ export default function CleanSlatePage() {
               },
             ].map((feature, i) => (
               <ScrollReveal key={feature.title} delay={i * 80}>
-                <div className="bg-white rounded-2xl p-6 border border-border card-interactive">
+                <div className="bg-white rounded-2xl p-6 border border-border card-interactive" data-cursor="hover">
                   <div className="w-10 h-10 rounded-xl bg-blue/10 flex items-center justify-center mb-4">
                     {feature.icon}
                   </div>
@@ -293,7 +293,7 @@ export default function CleanSlatePage() {
               CleanSlate is coming soon to iOS and Android.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <span className="btn-fill inline-flex items-center justify-center gap-2 bg-blue text-white px-8 py-3.5 rounded-full text-sm font-medium">
+              <span className="btn-fill btn-fill-bright inline-flex items-center justify-center gap-2 bg-blue text-white px-8 py-3.5 rounded-full text-sm font-medium">
                 Join the waitlist — Coming soon
               </span>
             </div>
