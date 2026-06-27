@@ -25,6 +25,18 @@ export function Footer() {
             >
               About
             </Link>
+            <Link
+              href="/cleanslate/privacy"
+              className="text-sm text-muted hover:text-ink transition-colors"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="/cleanslate/terms"
+              className="text-sm text-muted hover:text-ink transition-colors"
+            >
+              Terms
+            </Link>
             <a
               href="mailto:hello@cifr.studio"
               className="text-sm text-muted hover:text-ink transition-colors"
